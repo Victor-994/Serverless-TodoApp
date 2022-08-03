@@ -1,7 +1,7 @@
 # TODO: Change the name of the org 
 org: victor994
-app: serverless-infra-todoapp94
-service: serverless-infra-todoapp94
+app: serverless-infras-todoapp94
+service: serverless-infras-todoapp94
 
 plugins:
   - serverless-webpack
@@ -15,7 +15,7 @@ provider:
   runtime: nodejs12.x
  # lambdaHashingVersion: '20201221'
   stage: ${opt:stage, 'prod'}
-  region: ${opt:region, 'us-east-1'}
+  region: ${opt:region, 'us-east-2'}
 
   tracing:
     lambda: true
@@ -24,9 +24,9 @@ provider:
   # Use these variables in the functions and resouorces section below. For example, 
   # ${self:provider.environment.ATTACHMENT_S3_BUCKET}
   environment:
-    PROJECT_NAME: first-serverlessapp
-    TODOS_TABLE: serverlessapp94-${self:provider.stage}
-    S3_BUCKET_NAME: serverlessapp94-${self:provider.stage}
+    PROJECT_NAME: new-serverlessapp
+    TODOS_TABLE: t-serverlessapp94-${self:provider.stage}
+    S3_BUCKET_NAME: t-serverlessapp94-${self:provider.stage}
 
 
 custom:
